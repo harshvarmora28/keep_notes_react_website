@@ -17,7 +17,7 @@ const NoteState = (props) => {
           "_id": "616a7d2f166bd866f2e3bf2c",
           "user": "61609c0cc103ba0bc5cdf1de",
           "title": "internship",
-          "description": "Please work on cssi internship today",
+          "description": "desc1",
           "tag": "personal",
           "date": "2021-10-16T07:20:15.160Z",
           "__v": 0
@@ -26,7 +26,43 @@ const NoteState = (props) => {
           "_id": "616a7d2f166bd866f2e3bf2c",
           "user": "61609c0cc103ba0bc5cdf1de",
           "title": "Harsh Varmora",
-          "description": "Please work on cssi internship today",
+          "description": "desc2",
+          "tag": "personal",
+          "date": "2021-10-16T07:20:15.160Z",
+          "__v": 0
+        },
+        {
+          "_id": "616a7d2f166bd866f2e3bf2c",
+          "user": "61609c0cc103ba0bc5cdf1de",
+          "title": "internship",
+          "description": "desc1",
+          "tag": "personal",
+          "date": "2021-10-16T07:20:15.160Z",
+          "__v": 0
+        },
+        {
+          "_id": "616a7d2f166bd866f2e3bf2c",
+          "user": "61609c0cc103ba0bc5cdf1de",
+          "title": "Harsh Varmora",
+          "description": "desc2",
+          "tag": "personal",
+          "date": "2021-10-16T07:20:15.160Z",
+          "__v": 0
+        },
+        {
+          "_id": "616a7d2f166bd866f2e3bf2c",
+          "user": "61609c0cc103ba0bc5cdf1de",
+          "title": "internship",
+          "description": "desc1",
+          "tag": "personal",
+          "date": "2021-10-16T07:20:15.160Z",
+          "__v": 0
+        },
+        {
+          "_id": "616a7d2f166bd866f2e3bf2c",
+          "user": "61609c0cc103ba0bc5cdf1de",
+          "title": "Harsh Varmora",
+          "description": "desc2",
           "tag": "personal",
           "date": "2021-10-16T07:20:15.160Z",
           "__v": 0
