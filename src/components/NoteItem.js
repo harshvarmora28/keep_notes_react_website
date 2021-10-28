@@ -11,7 +11,7 @@ const NoteItem = (props) => {
           <p className="card-text">
             {note.description}
           </p>
-          <i className="far fa-trash-alt"></i>
+          <i className="fas fa-check"></i>
           <i className="fas fa-pen mx-3"></i>
         </div>
       </div>
