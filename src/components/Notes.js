@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { useContext } from "react";
 import noteContext from "../context/notes/noteContext";
 import AddNote from "./AddNote";
@@ -14,9 +14,21 @@ const Notes = () => {
   }, []);
 
   const ref = useRef(null);
+  const [note, setNote] = useState({ etitle: "", edescription: "", etag: "default" });
 
-  const updateNote = (note) => {
+
+  const updateNote = (currentNote) => {
     ref.current.click();
+    setNote({etitle: currentNote.title, edescription: currentNote.description, etag: currentNote.tag})
+  };
+
+  const handleClick = (e) => {
+    console.log("Upadting the notes...", note)
+    e.preventDefault();
+  };
+
+  const onChange = (e) => {
+    setNote({ ...note, [e.target.name]: e.target.value });
   };
 
   return (
@@ -53,7 +65,7 @@ const Notes = () => {
               </button>
             </div>
             <div className="modal-body">
-              {/* <form>
+              <form>
                 <div className="mb-2">
                   <label htmlFor="title" className="form-label">
                     Title
@@ -94,7 +106,7 @@ const Notes = () => {
                     value={note.etag}
                   />
                 </div>
-              </form> */}
+              </form>
             </div>
             <div className="modal-footer">
               <button
@@ -107,7 +119,7 @@ const Notes = () => {
               <button
                 type="button"
                 className="btn btn-primary"
-                // onClick={handleAddNote}
+                onClick={handleClick}
               >
                 Update
               </button>
