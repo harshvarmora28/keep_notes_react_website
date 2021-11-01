@@ -1,26 +1,42 @@
 import React, { useEffect, useRef, useState } from "react";
 import { useContext } from "react";
+import { useHistory } from "react-router";
 import noteContext from "../context/notes/noteContext";
 import AddNote from "./AddNote";
 import NoteItem from "./NoteItem";
 
 const Notes = () => {
   const context = useContext(noteContext);
+  const history = useHistory();
+
   const { notes, getNotes, editNote } = context;
 
   useEffect(() => {
-    getNotes();
+    if (localStorage.getItem("token")) {
+      getNotes();
+    } else {
+      history.push("/signin");
+    }
     // eslint-disable-next-line
   }, []);
 
   const ref = useRef(null);
   const refClose = useRef(null);
-  const [note, setNote] = useState({ id: "", etitle: "", edescription: "", etag: "default" });
-
+  const [note, setNote] = useState({
+    id: "",
+    etitle: "",
+    edescription: "",
+    etag: "",
+  });
 
   const updateNote = (currentNote) => {
     ref.current.click();
-    setNote({id: currentNote._id, etitle: currentNote.title, edescription: currentNote.description, etag: currentNote.tag})
+    setNote({
+      id: currentNote._id,
+      etitle: currentNote.title,
+      edescription: currentNote.description,
+      etag: currentNote.tag,
+    });
   };
 
   const handleClick = (e) => {
@@ -39,8 +55,8 @@ const Notes = () => {
       <button
         ref={ref}
         type="button"
-        className="btn btn-primary d-none"	
-        data-bs-toggle="modal"	
+        className="btn btn-primary d-none"
+        data-bs-toggle="modal"
         data-bs-target="#exampleModal"
       >
         Launch demo modal
@@ -60,11 +76,10 @@ const Notes = () => {
               </h5>
               <button
                 type="button"
-                className="btn-close"	
+                className="btn-close"
                 data-bs-dismiss="modal"
                 aria-label="Close"
-              >
-              </button>
+              ></button>
             </div>
             <div className="modal-body">
               <form>
@@ -79,7 +94,8 @@ const Notes = () => {
                     name="etitle"
                     onChange={onChange}
                     value={note.etitle}
-                    minLength={3} required
+                    minLength={3}
+                    required
                   />
                 </div>
                 <div className="mb-2">
@@ -94,7 +110,8 @@ const Notes = () => {
                     name="edescription"
                     onChange={onChange}
                     value={note.edescription}
-                    minLength={5} required
+                    minLength={5}
+                    required
                   />
                 </div>
                 <div className="mb-2">
@@ -108,7 +125,8 @@ const Notes = () => {
                     name="etag"
                     onChange={onChange}
                     value={note.etag}
-                    minLength={2} required
+                    minLength={2}
+                    required
                   />
                 </div>
               </form>
@@ -126,7 +144,9 @@ const Notes = () => {
                 type="button"
                 className="btn btn-primary"
                 onClick={handleClick}
-                disabled={note.etitle.length<3 ||note.edescription.length<5}
+                disabled={
+                  note.etitle.length < 3 || note.edescription.length < 5
+                }
               >
                 Update
               </button>
@@ -137,7 +157,7 @@ const Notes = () => {
       <div className="row my-4">
         <h3>Your Notes</h3>
         <div className="container">
-        {notes.length === 0 && "Notes you add appear here"}
+          {notes.length === 0 && "Notes you add appear here"}
         </div>
         {notes.map((note) => {
           return (
