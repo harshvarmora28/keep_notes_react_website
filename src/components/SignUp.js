@@ -9,13 +9,14 @@ const SignUp = () => {
     cpassword: "",
   });
   let history = useHistory();
+  let host = "http://localhost:5000";
 
   const handleSubmit = async (e) => {
     e.preventDefault();
 
     const { name, email, password } = credentials;
 
-    const response = await fetch("http://localhost:5000/api/auth/createuser", {
+    const response = await fetch(`${host}/api/auth/createuser`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -29,7 +30,7 @@ const SignUp = () => {
     const json = await response.json();
     console.log(json);
 
-      localStorage.setItem("token", json.authtoken);
+      localStorage.setItem("token", json.authToken);
       history.push("/");
   };
 
@@ -39,7 +40,7 @@ const SignUp = () => {
 
   return (
     <div className="container my-4">
-      <h3>Sign in</h3>
+      <h3>Sign Up</h3>
       <form onSubmit={handleSubmit}>
         <div className="mb-3">
           <label htmlFor="name" className="form-label">

@@ -53,7 +53,7 @@ const NoteState = (props) => {
           localStorage.getItem("token"),
       },
     });
-    const json = response.json();
+    // const json = response.json();
 
 
     // deleting a note in client
