@@ -19,11 +19,11 @@ const SignIn = () => {
       }),
     });
     const json = await response.json();
-    console.log(json);
+    // console.log(json.authToken);
 
     if (json.success) {
       // Save the auth token and Redirect if success equals true
-      localStorage.setItem("token", json.authtoken);
+      localStorage.setItem("token", json.authToken);
       history.push("/");
     } else {
       alert("invalid credentials");
