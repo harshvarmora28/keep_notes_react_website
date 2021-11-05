@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import { Link, useLocation, useHistory } from "react-router-dom";
+import "./Navbar.css";
 
 
 
@@ -16,10 +17,10 @@ const Navbar = () => {
 
 
   return (
-    <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
-      <div className="container-fluid">
-        <Link className="navbar-brand" to="/#">
-          Keep-Notes
+    <nav className="navbar navbar-expand-lg navbar-dark bg-dark" id="navbar">
+      <div className="container-fluid" id="nav__div">
+        <Link className="navbar-brand" id="nav__title" to="/#">
+          Keep Notes
         </Link>
         <button
           className="navbar-toggler"
@@ -46,9 +47,9 @@ const Navbar = () => {
             </li>
           </ul>
           {!localStorage.getItem("token") ? <form className="d-flex">
-            <Link className="btn btn-primary mx-3" to="/signin" role="button">Sign in</Link>
-            <Link className="btn btn-primary" to="/signup" role="button">Sign up</Link>
-          </form>: <button onClick={handleLogout} className="btn btn-primary">Logout</button>}
+            <Link className="btn mx-3 nav__btn" id="nav__signin" to="/signin" role="button">Sign in</Link>
+            <Link className="btn nav__btn" id="nav__signup" to="/signup" role="button">Sign up</Link>
+          </form>: <button onClick={handleLogout} className="btn nav__btn" id="nav__logout">Logout</button>}
         </div>
       </div>
     </nav>
