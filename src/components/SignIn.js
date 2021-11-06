@@ -70,7 +70,7 @@ const SignIn = () => {
             onChange={onChange}
           />
         </div>
-        <button type="submit" className="btn btn-primary">
+        <button type="submit" className="btn btn-primary" id="submit__btn">
           Submit
         </button>
       </form>
