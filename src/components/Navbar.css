@@ -42,3 +42,15 @@
 #nav__signup:hover{
     border: 1px solid #fa8142;
 }
+#nav__home{
+    color: #b2becd;
+}
+#nav__about{
+    color: #b2becd;
+}
+#nav__home:hover{
+    color: white;
+}
+#nav__about:hover{
+    color: white;
+}

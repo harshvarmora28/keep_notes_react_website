@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useHistory } from "react-router-dom";
+import "./SignIn.css";
 
 const SignIn = () => {
   const [credentials, setCredentials] = useState({ email: "", password: "" });
@@ -37,7 +38,7 @@ const SignIn = () => {
 
   return (
     <div className="container my-4">
-      <h3>Sign in</h3>
+      <h3 id="signin__title">Sign in</h3>
       <form onSubmit={handleSubmit}>
         <div className="mb-3">
           <label htmlFor="email" className="form-label">
