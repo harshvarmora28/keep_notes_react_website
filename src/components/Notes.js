@@ -133,23 +133,25 @@ const Notes = () => {
               </form>
             </div>
             <div className="modal-footer">
-              <button
-                ref={refClose}
-                type="button"
-                className="btn btn-secondary"
-                data-bs-dismiss="modal"
-              >
-                Close
-              </button>
-              <button
+            <button
                 type="button"
                 className="btn btn-primary"
+                id="update__btn"
                 onClick={handleClick}
                 disabled={
                   note.etitle.length < 3 || note.edescription.length < 5
                 }
               >
                 Update
+              </button>
+              <button
+                ref={refClose}
+                type="button"
+                id="close__btn"
+                className="btn btn-secondary"
+                data-bs-dismiss="modal"
+              >
+                Close
               </button>
             </div>
           </div>
