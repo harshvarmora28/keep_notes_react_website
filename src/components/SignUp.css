@@ -1,0 +1,17 @@
+@font-face{
+    font-family: cubano;
+    src: url(../Cubano.ttf);
+}
+@font-face{
+    font-family: sofia-pro;
+    src: url(../Sofia\ Pro\ Regular\ Az.otf);
+}
+*{
+    background-color: rgb(18,24,27);
+}
+#signup__title{
+    font-family: cubano, sans-serif;
+    color: white;
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+}

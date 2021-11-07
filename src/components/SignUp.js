@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useHistory } from "react-router-dom";
+import "./SignUp.css";
 
 const SignUp = () => {
   const [credentials, setCredentials] = useState({
@@ -40,7 +41,7 @@ const SignUp = () => {
 
   return (
     <div className="container my-4">
-      <h3>Sign Up</h3>
+      <h3 id="signup__title">Sign Up</h3>
       <form onSubmit={handleSubmit}>
         <div className="mb-3">
           <label htmlFor="name" className="form-label">
@@ -100,7 +101,7 @@ const SignUp = () => {
             minLength={5}
           />
         </div>
-        <button type="submit" className="btn btn-primary">
+        <button type="submit" id="submit__btn" className="btn btn-primary">
           Submit
         </button>
       </form>

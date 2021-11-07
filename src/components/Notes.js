@@ -4,6 +4,7 @@ import { useHistory } from "react-router";
 import noteContext from "../context/notes/noteContext";
 import AddNote from "./AddNote";
 import NoteItem from "./NoteItem";
+import "./Notes.css";
 
 const Notes = () => {
   const context = useContext(noteContext);
@@ -155,7 +156,7 @@ const Notes = () => {
         </div>
       </div>
       <div className="row my-4">
-        <h3>Your Notes</h3>
+        <h3 id="yourNotes__title">Your Notes</h3>
         <div className="container">
           {notes.length === 0 && "Notes you add appear here"}
         </div>

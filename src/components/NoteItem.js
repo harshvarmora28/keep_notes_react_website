@@ -1,5 +1,6 @@
 import React, { useContext } from "react";
 import noteContext from "../context/notes/noteContext";
+import "./NoteItem.css";
 
 const NoteItem = (props) => {
   const context = useContext(noteContext);
@@ -9,8 +10,8 @@ const NoteItem = (props) => {
 
   return (
     <div className="col-md-4">
-      <div className="card my-3">
-        <div className="card-body">
+      <div className="card border-0 my-3" style={{borderRadius: "14px"}}>
+        <div className="card-body" id="noteItem" style={{borderRadius: "12px"}}>
           <h5 className="card-title">{note.title}</h5>
           <p className="card-text">
             {note.description}
