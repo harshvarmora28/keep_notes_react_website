@@ -32,3 +32,23 @@
 #addNote__btn:hover{
     background-color: rgb(9, 165, 97);
 }
+.fa-trash-alt{
+    color: #fa8142;
+    background-color: transparent;
+    background: #fa8142;
+    background: -webkit-linear-gradient(to right, #fa8142 0%, #ff4088 100%);
+    background: -moz-linear-gradient(to right, #fa8142 0%, #ff4088 100%);
+    background: linear-gradient(to right, #fa8142 0%, #ff4088 100%);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.fa-pen{
+    color: rgb(9,195,114);
+    background-color: transparent;
+    background: #0275d8;
+    background: -webkit-linear-gradient(to right, #0275d8 0%, rgb(9,195,114) 100%);
+    background: -moz-linear-gradient(to right, #0275d8 0%, rgb(9,195,114) 100%);
+    background: linear-gradient(to right, #0275d8 0%, rgb(9,195,114) 100%);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
