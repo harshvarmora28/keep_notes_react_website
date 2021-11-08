@@ -80,6 +80,7 @@ const Notes = () => {
                 className="btn-close"
                 data-bs-dismiss="modal"
                 aria-label="Close"
+                style={{visibility: "hidden"}}
               ></button>
             </div>
             <div className="modal-body">
@@ -159,7 +160,7 @@ const Notes = () => {
       </div>
       <div className="row my-4">
         <h3 id="yourNotes__title">Your Notes</h3>
-        <div className="container">
+        <div className="container" id="noNotes">
           {notes.length === 0 && "Notes you add appear here"}
         </div>
         {notes.map((note) => {
