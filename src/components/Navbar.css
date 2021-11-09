@@ -31,21 +31,27 @@
     padding: 7.5px 20px;
 }
 #nav__logout:hover{
-    border: 1px solid #fa8142;
+    color: white;
+    background: #fa8142;
+    background: -webkit-linear-gradient(to right, #fa8142 0%, #ff4088 100%);
+    background: -moz-linear-gradient(to right, #fa8142 0%, #ff4088 100%);
+    background: linear-gradient(to right, #fa8142 0%, #ff4088 100%);
 }
 #nav__signin{
     color: #ff4088;
     padding: 7.5px 20px;
 }
 #nav__signin:hover{
-    border: 1px solid #ff4088;
+    background-color: #ff4088;
+    color: white;
 }
 #nav__signup{
     color: #fa8142;
     padding: 7.5px 20px;
 }
 #nav__signup:hover{
-    border: 1px solid #fa8142;
+    background-color: #fa8142;
+    color: white;
 }
 #nav__home{
     color: #b2becd;

@@ -71,7 +71,7 @@ const SignIn = () => {
           />
         </div>
         <button type="submit" className="btn btn-primary" id="submit__btn">
-          Submit
+          Sign in
         </button>
       </form>
     </div>
